@@ -1,0 +1,217 @@
+
+.user-wrapper {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    padding: 15px 15px 0;
+}
+.user_img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+}
+.user_content {
+    flex: 1;
+    text-align: right;
+    margin-left: 15px;
+}
+.finance {
+    position: sticky;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 40px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.finance-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+}
+.line {
+    width: 3px;
+    height: 40px;
+    background-color: #ccc;
+}
+.divider {
+    margin: 10px auto;
+    width: 90%;
+    height: 1px;
+    background-color: #ebedf0;
+}
+.wallet {
+    margin: 20px 20px 0;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 1.5px 1px 0 #e4e4e7;
+}
+.part1 {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    color: #8c71d2;
+    font-size: 15px;
+    margin-top: 20px;
+    border-bottom: 0.5px solid #ebedf0;;
+}
+.part2 {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.balance {
+    flex: 1;
+    font-size: 28px;
+    color: #8774d3;
+    font-weight: 700;
+}
+.refresh-btn {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(270deg, #ef42cd, #8774d3);
+}
+.menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px 20px 0;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 1.5px 1px 0 #e4e4e7;
+}
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    height: 70px;
+    line-height: 1.4;
+    cursor: pointer;
+}
+.menu-item-icon {
+    margin: 15px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    position: relative;
+    display: inline-block;
+}
+.menu-item-label {
+    font-size: 14px;
+    color: #868686;
+    font-weight: 500;
+}
+.menu-item-icon img {
+    width: 40px;
+    height: 40px;
+}
+.detail {
+    margin: 15px 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 1.5px 1px 0 #e4e4e7;
+}
+.detail .des {
+    padding: 20px 0px 10px;
+}
+.detail .des .title {
+    font-size: 18px;
+}
+.detail .des .value {
+    margin: 10px auto;
+    font-size: 32px;
+    border-bottom: 1px solid #fff;
+    color: #f2000f;
+    font-weight: 700;
+}
+.detail .dataList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+.detail .dataList .dataItem {
+    padding-top: 10px;
+    height: 100px;
+    width: 33.3%;
+}
+.detail .dataList .dataItem .dataItemVal {
+    color: #f2000f;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+.info {
+    background-color: #fff;
+    padding: 0 20px;
+}
+.info .divider {
+    margin: 0;
+    height: 2px;
+    width: 100%;
+}
+.info .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 15px 0;
+}
+.info .item .desc {
+    font-size: 16px;
+    font-weight: 700;
+    color: #979799;
+}
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 20px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.contactTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+.contactTop .title {
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #000;
+    flex: 1;
+}
+.contactTop img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.contactBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background: #f2f2f5;
+    border-radius: 10px;
+    color: #979799;
+}

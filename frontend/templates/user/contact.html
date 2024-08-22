@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/account.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="content">
+        <div class="contact">
+            <div class="contactTop">
+                <img src="{% static 'img/icon/i/contact.png' %}" alt="">
+                <div class="title">Chăm Sóc Khách Hàng</div>
+                <button>Kết nối</button>
+            </div>
+            <div class="contactBottom">
+                <div class="title">Phục vụ tận tình 24/7</div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

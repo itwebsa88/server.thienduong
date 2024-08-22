@@ -1,0 +1,503 @@
+html {
+  font-family: Arial;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.content {
+  position: relative;
+  height: auto;
+  padding-bottom: 80px;
+}
+img {
+  vertical-align: middle;
+  width: 100%;
+}
+body {
+  margin: 0px;
+  min-height: 100vh;
+  background-color: #f3f3f3;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 120px;
+}
+header .logo {
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  background: linear-gradient(270deg, #c24491, #775fd9);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+header h1 {
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+}
+button {
+  background: linear-gradient(270deg, #ef42cd, #8774d3);
+  min-width: 120px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  color: #f3f3f3;
+  font-weight: 600;
+  cursor: pointer;
+}
+a:-webkit-any-link {
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+input {
+  border: none;
+  font-size: 1rem;
+  background-color: transparent;
+}
+#bet_val {
+  display: flex;
+  flex: 1;
+  height: 40px;
+  width: 150px;
+}
+input:focus-visible {
+  outline: none;
+}
+.logo {
+  height: 100%;
+  width: 150px;
+}
+.banner {
+  overflow-x: hidden;
+}
+.swiper {
+  width: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.notice {
+  height: 40px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  margin: 8px;
+}
+.notice img {
+  height: 40px;
+  width: 40px;
+}
+.notice_content {
+  width: 100%;
+  padding-right: 20px;
+  align-self: center;
+}
+.controler_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+.controler_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  margin: 8px;
+}
+.controler_mainV2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.controler_itemV2 {
+  border-radius: 15px;
+  border: 1px solid #3c1026;
+  overflow: hidden;
+  background-color: #f5e9f0;
+}
+.controler_item {
+  width: 24%;
+  height: 100%;
+  color: #000;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid #3c1026;
+  overflow: hidden;
+  min-height: 210px;
+  background-color: #f5e9f0;
+}
+.controler_item img {
+  max-height: 120px;
+  overflow: hidden;
+}
+.controler_item p {
+  padding: 5px;
+}
+.controler_itemV2 {
+  width: 40%;
+  color: #000;
+  text-align: center;
+  background-color: #fff;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+.controler_itemV2 img {
+  max-height: 500px;
+}
+.item_container {
+  padding-bottom: 100%;
+}
+.item_contain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.active {
+  background-color: #ff253f !important;
+}
+.active p {
+  color: #fff !important;
+}
+.controler_img {
+  max-height: 150px;
+  overflow: hidden;
+}
+.controler_imgV2 {
+  max-height: 220px;
+  overflow: hidden;
+}
+.controler_img img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.controler_imgV2 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.gallary_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 8px;
+}
+.gallary_item {
+  width: 49%;
+  margin-bottom: 20px;
+  overflow: hidden;
+  float: left;
+  position: relative;
+}
+
+.item_img {
+  height: 75%;
+  overflow: hidden;
+}
+.item_img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.item_describe {
+  padding-top: 5px;
+}
+.item_star {
+  display: flex;
+  align-items: center;
+}
+.item_star img {
+  width: 10%;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  max-width: 600px;
+}
+.footerItem {
+  text-align: center;
+  height: 70px;
+  width: 20%;
+}
+.footerItem img {
+  height: 50px;
+  width: 50px;
+}
+.footerItem p {
+  font-size: 10px;
+  margin: 0px;
+}
+.footerMidItem {
+  position: relative;
+  bottom: 25px;
+}
+.footerMidItem img {
+  border-radius: 35px;
+  width: 60px;
+  height: 60px;
+  border: 5px solid #fff;
+}
+
+.bet {
+  background-color: #fff;
+}
+.bet_header {
+  padding: 0 15px;
+}
+.bet_main {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f3f3f3;
+}
+.bet_item {
+  width: 23%;
+  color: #000;
+  margin: 2.667% 0.667%;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 15px;
+  position: relative;
+}
+@media only screen and (max-width: 500px) {
+  .gallary_item {
+    width: 48%;
+  }
+  .controler_main {
+    justify-content: space-evenly;
+    gap: 15px;
+  }
+  .controler_item {
+    width: 45%;
+  }
+  .controler_itemV2 {
+    width: 45%;
+  }
+  .controler_img {
+    height: 30%;
+  }
+  .controler_imgV2 {
+    height: 50%;
+  }
+  .bet_item {
+    width: 45%;
+  }
+}
+.betting_box {
+  position: fixed;
+  bottom: 70px;
+  z-index: 25;
+  width: 100%;
+  max-width: 600px;
+}
+.betting {
+  background-color: #fff;
+  padding: 15px;
+}
+.bet_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px 0;
+}
+.red {
+  color: #ff253f;
+}
+.bet_table {
+  display: none;
+  padding: 10px 0;
+}
+.bet_info {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+}
+#count {
+  font-size: 20px;
+}
+.valSelect {
+  white-space: nowrap;
+  overflow: scroll;
+}
+.ribbon {
+  font-size: 0.9em;
+  position: absolute;
+  top: 0;
+  border-left: 3px solid #ea4335;
+  border-radius: 0 4px 4px 0;
+  background: none repeat scroll 0 0 rgba(17, 17, 17, 0.6);
+  padding: 2px 4px;
+  margin-top: 2px;
+  margin-left: 7px;
+  color: #fff;
+}
+.pagenavi {
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.pagenavi a {
+  margin-top: 5px;
+  border: 1px solid #dadada;
+  padding: 5px 15px;
+  margin-right: 5px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.video-player {
+  width: 100%;
+  max-width: 800px;
+}
+.video-player iframe {
+  height: 400px;
+  max-width: 600px;
+}
+
+.control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.control .left {
+  text-align: center;
+  padding-right: 5px;
+  cursor: pointer;
+}
+.control .mid {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+.control .right {
+  padding-left: 15px;
+}
+.control .left img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.line {
+  width: 3px;
+  height: 40px;
+  background-color: #ccc;
+}
+
+/* mailisa */
+:root {
+  --main-cl-dark: #7f143d;
+}
+.grid_3 {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 0;
+  gap: 1.5625rem;
+}
+.service_item {
+  width: calc(100% / 3 - 1.042rem);
+  border: 2px solid var(--main-cl-dark);
+  border-radius: 1.042rem;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0rem 0.208rem 1.042rem rgba(94, 0, 54, 0.05);
+}
+.controler_itemV2 h3, .controler_item h3 {
+    color: var(--main-cl-dark);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.25rem;
+    font-size: 16px;
+    min-height: 3.5rem;
+}
+
+.gallary_item {
+    overflow: hidden;
+    border-radius: 1.042rem;
+    overflow: hidden;
+    box-shadow: 0rem 0.208rem 1.042rem rgba(94, 0, 54, 0.05);
+    border: 2px solid var(--main-cl-dark);
+}
+.gallary_item img {
+    height: 18.229rem;
+    width: 100%;
+    transition: 0.4s ease-in-out;
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+}
+.video-name {
+    background-color: #F1E6EC;
+    padding: 1.042rem 0.729rem 1.5625rem;
+    height: 100%;
+}
+.video-name h3 {
+    color: var(--main-cl-dark);
+    text-align: center;
+    margin-bottom: 0.78125rem;
+}
+.video-name p {
+    font-size: 0.833rem;
+    line-height: 1.25rem;
+}
+
+
+.price_box {
+    background: linear-gradient(to top, #3c1026 0%, #c72d70 45.5307%, #b94880 100%);
+    border-radius: 5.208rem;
+    padding: 0rem 0.5rem;
+    margin: 0px 0.5rem 0.5rem;
+}
+
+.price_box > span {
+    color: #FFFF7D;
+    font-size: 0.9rem;
+    line-height: 1.875rem;
+    font-weight: 900;
+}
+
+.breadcrumb {
+    margin: 15px 8px;
+}

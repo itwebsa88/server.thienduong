@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/account.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="content-v2">
+        <div class="info">
+                <div class="item">
+                    <div class="left">Ảnh đại diện</div>
+                    <div class="right"></div>
+                </div>
+                <div class="divider"></div>
+                <div class="item">
+                    <div class="left">Họ tên thật</div>
+                    <div class="right"><span class="desc">itwebsa88</span></div>
+                </div>
+                <div class="divider"></div>
+                <div class="item">
+                    <div class="left">Giới tính</div>
+                    <div class="right"><span class="desc">Nam</span></div>
+                </div>
+                <div class="divider"></div>
+                <div class="item">
+                    <div class="left">Liên kết ngân hàng</div>
+                    <div class="right"><span class="desc">Chưa liên kết</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

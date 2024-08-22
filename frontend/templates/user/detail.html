@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/account.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="content">
+        <div class="detail">
+            <div class="des">
+                <div class="title">Số điểm thắng/thua(đ)</div>
+                <div class="value">0</div>
+                <div class="tip">Công thức tính: Số điểm thắng - Số điểm bình chọn</div>
+            </div>
+            <div class="divider"></div>
+            <div class="dataList">
+                <div class="dataItem">
+                    <div class="dataItemVal">0</div>
+                    <div class="dataItemKey">Số điểm bình chọn</div>
+                </div>
+                <div class="dataItem">
+                    <div class="dataItemVal">0</div>
+                    <div class="dataItemKey">Số điểm nạp</div>
+                </div>
+                <div class="dataItem">
+                    <div class="dataItemVal">0</div>
+                    <div class="dataItemKey">Số điểm rút</div>
+                </div>
+                <div class="dataItem">
+                    <div class="dataItemVal">0</div>
+                    <div class="dataItemKey">Số điểm thắng</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

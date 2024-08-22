@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thiên Đường Giải Trí</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    {% block head %} {% endblock %}
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <!-- <h1>THẨM MỸ VIỆN MAILISA</h1> -->
+        <img src="{% static 'img/icon/Logo-Mailisa.svg' %}" alt="" width="150px" height="60px" />
+      </div>
+      <div style="display: flex; justify-content: center; align-items: center; gap: 16px; color: purple; height: 60px; background-color: #fff">
+        <div style="font-weight: 600; font-size: 12px; text-align: center;">GIỚI THIỆU</div>
+        <div style="font-weight: 600; font-size: 12px; text-align: center;">PHUN MÀU THẨM MỸ</div>
+        <div style="font-weight: 600; font-size: 12px; text-align: center;">ĐIỀU TRỊ DA</div>
+        <div style="font-weight: 600; font-size: 12px; text-align: center;">PHẪU THUẬT</div>
+        <div style="font-weight: 600; font-size: 12px; text-align: center;">MỸ PHẨM</div>
+        <div style="font-weight: 600; font-size: 12px; text-align: center;">ĐÀO TẠO</div>
+      </div>
+    </header>
+    {% block content %} {% endblock %}
+    <footer>
+      <div class="footerItem">
+        <a href="/">
+          <img src="{% static 'img/icon/home.jpg' %}" alt="" />
+          <p>TRANG CHỦ</p>
+        </a>
+      </div>
+      <div class="footerItem">
+        <a href="/lobby">
+          <img src="{% static 'img/icon/lobby.jpg' %}" alt="" />
+          <p>SẢNH</p>
+        </a>
+      </div>
+      <div class="footerItem">
+        <a href="/">
+          <div class="footerMidItem">
+            <img src="{% static 'img/icon/logo.png' %}" alt="" />
+          </div>
+        </a>
+      </div>
+      <div class="footerItem">
+        <a href="/video">
+          <img src="{% static 'img/icon/video.jpg' %}" alt="" />
+          <p>VIDEO</p>
+        </a>
+      </div>
+      <div class="footerItem">
+        <a href="/account">
+          <img src="{% static 'img/icon/account.jpg' %}" alt="" />
+          <p>TÀI KHOẢN</p>
+        </a>
+      </div>
+    </footer>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".banner", {
+        slidesPerView: "auto",
+        loop: true,
+        autoplay: {
+          delay: 3000,
+        },
+        spaceBetween: 30,
+      });
+    </script>
+  </body>
+</html>

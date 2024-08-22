@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+{% endblock %}
+{% block content %}
+<div class="content">
+    <div class="bet">
+        <div class="bet_header">
+            <div class="bet_title">
+                <h3>
+                    PHIÊN 2222XXXXX
+                </h3>
+                <span class="red" id="count"></span>
+            </div>
+            <div style="background: linear-gradient(to right, rgba(126, 86, 120, 0), rgb(239, 66, 205), rgba(126, 86, 120, 0)); width: 100%; height: 2px;"></div>
+            <div class="bet_title">
+                PHIÊN TRƯỚC 2222XXXXX: <span class="red">Xinh Đẹp Đáng Yêu</span>
+            </div>
+        </div>
+        <div class="betting_box">
+            <div class="betting">
+                <div class="bet_table">
+                    <div class="bet_info">
+                        Bạn đã chọn: 
+                        <span id="valSelect" class="red"></span>
+                    </div>
+                    <div class="bet_info">
+                        Điểm:
+                        <input id="bet_val" type="text" placeholder="Nhập số điểm"> K
+                    </div>
+                    <div class="bet_info">
+                        <p>Đã đặt: <span id="noSelect"></span> Cửa</p>
+                        <p>Tổng cộng: <span id="total_bet"></span> K</p>
+                    </div>
+                </div>
+                <div class="control">
+                    <div class="left">
+                        <img src="{% static 'img/icon/i/cart.svg' %}" alt="">
+                        <span>Lựa chọn</span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="mid">
+                        Số dư:&nbsp;<span class="red">0 $</span>
+                    </div>
+                    <div class="right">
+                        <button>XÁC NHẬN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bet_main">
+        <div class="bet_item">
+            <div class="item_container">
+            </div>
+            <div class="item_contain">
+                <p><strong>Xinh Đẹp </strong></p>
+                <p class="red">2.0</p>
+            </div>
+        </div>
+        <div class="bet_item">
+            <div class="item_container">
+            </div>
+            <div class="item_contain">
+                <p><strong>Đáng Yêu </strong></p>
+                <p class="red">2.0</p>
+            </div>
+        </div>
+        <div class="bet_item">
+            <div class="item_container">
+            </div>
+            <div class="item_contain">
+                <p><strong>Quyến Rũ </strong></p>
+                <p class="red">2.0</p>
+            </div>
+        </div>
+        <div class="bet_item">
+            <div class="item_container">
+            </div>
+            <div class="item_contain">
+                <p><strong>Gợi Cảm</strong></p>
+                <p class="red">2.0</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function() {
+        $('.bet_item').click(function() {
+            if($(this).hasClass('active')) {
+                $(this).removeClass("active");
+            }
+            else {
+                $(this).addClass("active");
+            }
+            $('#noSelect').html($('.bet_item.active').length);
+            $('#valSelect').html($('.bet_item.active strong').text());
+            $('#total_bet').html($('.bet_item.active').length * $('#bet_val').val());
+            if($('.bet_item.active').length){
+                $('.bet_table').show('normal');
+            } else {
+                $('.bet_table').hide('normal');
+            }
+        });
+        $("input[id=bet_val]").on("input", function() {
+            if($('.bet_item.active').length) {
+                $('#total_bet').html($('.bet_item.active').length * $(this).val());
+            }
+        });
+        $('.control .left').click(function() {
+            if ($('.bet_table').is(":hidden"))
+                $('.bet_table').show('normal');
+            else
+                $('.bet_table').hide('normal');
+        })
+        $("#count").ready(function() {
+            var timer = setInterval(function() {
+                var currT = new Date();
+                var remainT = parseInt(currT.getMinutes()/3 + 1)*3*60 - currT.getMinutes()*60 - currT.getSeconds();
+                if (remainT !== 0) {
+                    if (parseInt(remainT - parseInt(remainT/60)*60) < 10) {
+                        var timeT = '00:0' + parseInt(remainT/60) + ':0' + parseInt(remainT - parseInt(remainT/60)*60);
+                    } else 
+                        var timeT = '00:0' + parseInt(remainT/60) + ':' + parseInt(remainT - parseInt(remainT/60)*60);
+                    $('#count').html(timeT);
+                } else {
+                    clearInterval(timer);
+                }
+            }, 1000);
+        });
+    });
+</script>
+{% endblock %}
