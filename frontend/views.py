@@ -19,20 +19,53 @@ def video(request):
     return HttpResponse(template.render())
 
 def game1(request):
+    img_obj = {
+        "img_list": [
+            'img/choice/1-1.jpg',
+            'img/choice/1-2.jpg',
+            'img/choice/1-3.jpg',
+            'img/choice/1-4.jpg',
+        ]
+    }
     template = loader.get_template('game.html')
-    return HttpResponse(template.render())
+    return HttpResponse(template.render(img_obj, request))
 
 def game2(request):
+    img_obj = {
+        "img_list": [
+            'img/choice/2-1.jpg',
+            'img/choice/2-2.jpg',
+            'img/choice/2-3.jpg',
+            'img/choice/2-4.jpg',
+        ]
+    }
+
     template = loader.get_template('game.html')
-    return HttpResponse(template.render())
+    return HttpResponse(template.render(img_obj, request))
 
 def game3(request):
+    img_obj = {
+        "img_list": [
+            'img/choice/3-1.jpg',
+            'img/choice/3-2.jpg',
+            'img/choice/3-3.jpg',
+            'img/choice/3-4.jpg',
+        ]
+    }
     template = loader.get_template('game.html')
-    return HttpResponse(template.render())
+    return HttpResponse(template.render(img_obj, request))
 
 def game4(request):
+    img_obj = {
+        "img_list": [
+            'img/choice/4-1.jpg',
+            'img/choice/4-2.jpg',
+            'img/choice/4-3.jpg',
+            'img/choice/4-4.jpg',
+        ]
+    }
     template = loader.get_template('game.html')
-    return HttpResponse(template.render())
+    return HttpResponse(template.render(img_obj, request))
 
 def account(request):
     template = loader.get_template('account.html')
