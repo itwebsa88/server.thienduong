@@ -1,44 +1,22 @@
 {% extends "base.html" %} {% load static %} {% block head %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 {% endblock %} {% block content %}
+<style>
+  @media only screen and (max-width: 500px) {
+    .bet_main {
+      padding-bottom: 200px;
+    }
+  }
+</style>
 <div class="content">
   <div class="bet">
     <div class="bet_header">
       <div class="bet_title">
-        <h3>Lượt bán 2222XXXXX</h3>
+        <h3>Lượt bán: 2222XXXXX</h3>
         <span class="red" id="count"></span>
       </div>
       <div style="background: linear-gradient(to right, rgba(126, 86, 120, 0), rgb(239, 66, 205), rgba(126, 86, 120, 0)); width: 100%; height: 2px"></div>
-      <div class="bet_title">Lượt bán TRƯỚC 2222XXXXX: <span class="red">Xinh Đẹp Đáng Yêu</span></div>
-    </div>
-    <div class="betting_box">
-      <div class="betting">
-        <div class="bet_table">
-          <div class="bet_info">
-            Bạn đã chọn:
-            <span id="valSelect" class="red"></span>
-          </div>
-          <div class="bet_info">
-            Điểm:
-            <input id="bet_val" type="text" placeholder="Nhập số điểm" /> K
-          </div>
-          <div class="bet_info">
-            <p>Đã đặt: <span id="noSelect"></span> Cửa</p>
-            <p>Tổng cộng: <span id="total_bet"></span> K</p>
-          </div>
-        </div>
-        <div class="control">
-          <div class="left">
-            <img src="{% static 'img/icon/i/cart.svg' %}" alt="" />
-            <span>Lựa chọn</span>
-          </div>
-          <div class="line"></div>
-          <div class="mid">Số dư:&nbsp;<span class="red">0 $</span></div>
-          <div class="right">
-            <button>XÁC NHẬN</button>
-          </div>
-        </div>
-      </div>
+      <div class="bet_title">Lượt bán trước: 2222XXXXX <span class="red">Xinh Đẹp Đáng Yêu</span></div>
     </div>
   </div>
   <div class="bet_main">
@@ -46,10 +24,41 @@
     <div class="bet_item">
       <div class="item_container"></div>
       <div class="item_contain">
-        <img src="/static/{{image}}" alt="" />
+        <img src="/static/{{image.img}}" alt="" />
       </div>
+      <div class="item_content">{{image.des}}</div>
     </div>
     {% endfor %}
+  </div>
+
+  <div class="betting_box">
+    <div class="betting">
+      <div class="bet_table">
+        <div class="bet_info">
+          Bạn đã chọn:
+          <span id="valSelect" class="red"></span>
+        </div>
+        <div class="bet_info">
+          Điểm:
+          <input id="bet_val" type="text" placeholder="Nhập số điểm" /> K
+        </div>
+        <div class="bet_info">
+          <p>Đã đặt: <span id="noSelect"></span> Cửa</p>
+          <p>Tổng cộng: <span id="total_bet"></span> K</p>
+        </div>
+      </div>
+      <div class="control">
+        <div class="left">
+          <img src="{% static 'img/icon/i/cart.svg' %}" alt="" />
+          <span>Lựa chọn</span>
+        </div>
+        <div class="line"></div>
+        <div class="mid">Số dư:&nbsp;<span class="red">0 $</span></div>
+        <div class="right">
+          <button>XÁC NHẬN</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <script>
@@ -57,16 +66,11 @@
     $(".bet_item").click(function () {
       if ($(this).hasClass("active")) {
         $(this).removeClass("active");
-        // $("#valSelect").remove("1-3.jpg");
       } else {
         $(this).addClass("active");
-        // $("#valSelect").append(
-        //   $(".bet_item.active img")
-        //     .attr("src")
-        //     .replace(/^.*[\\\/]/, "")
-        // );
       }
       $("#noSelect").html($(".bet_item.active").length);
+      $("#valSelect").html($(".bet_item.active").text());
       $("#total_bet").html($(".bet_item.active").length * $("#bet_val").val());
       if ($(".bet_item.active").length) {
         $(".bet_table").show("normal");

@@ -21,10 +21,14 @@ def video(request):
 def game1(request):
     img_obj = {
         "img_list": [
-            'img/choice/1-1.jpg',
-            'img/choice/1-2.jpg',
-            'img/choice/1-3.jpg',
-            'img/choice/1-4.jpg',
+            {"img": 'img/choice/1-1.jpg',
+            "des": 'Combo 1'},
+            {"img": 'img/choice/1-2.jpg',
+            "des": 'Combo 2'},
+            {"img": 'img/choice/1-3.jpg',
+            "des": 'Combo 3'},
+            {"img": 'img/choice/1-4.jpg',
+            "des": 'Combo 4'}
         ]
     }
     template = loader.get_template('game.html')
@@ -33,10 +37,14 @@ def game1(request):
 def game2(request):
     img_obj = {
         "img_list": [
-            'img/choice/2-1.jpg',
-            'img/choice/2-2.jpg',
-            'img/choice/2-3.jpg',
-            'img/choice/2-4.jpg',
+            {"img": 'img/choice/2-1.jpg',
+            "des": 'Combo 1'},
+            {"img": 'img/choice/2-2.jpg',
+            "des": 'Combo 2'},
+            {"img": 'img/choice/2-3.jpg',
+            "des": 'Combo 3'},
+            {"img": 'img/choice/2-4.jpg',
+            "des": 'Combo 4'}
         ]
     }
 
@@ -46,10 +54,14 @@ def game2(request):
 def game3(request):
     img_obj = {
         "img_list": [
-            'img/choice/3-1.jpg',
-            'img/choice/3-2.jpg',
-            'img/choice/3-3.jpg',
-            'img/choice/3-4.jpg',
+            {"img": 'img/choice/3-1.jpg',
+            "des": 'Combo 1'},
+            {"img": 'img/choice/3-2.jpg',
+            "des": 'Combo 2'},
+            {"img": 'img/choice/3-3.jpg',
+            "des": 'Combo 3'},
+            {"img": 'img/choice/3-4.jpg',
+            "des": 'Combo 4'}
         ]
     }
     template = loader.get_template('game.html')
@@ -58,10 +70,14 @@ def game3(request):
 def game4(request):
     img_obj = {
         "img_list": [
-            'img/choice/4-1.jpg',
-            'img/choice/4-2.jpg',
-            'img/choice/4-3.jpg',
-            'img/choice/4-4.jpg',
+            {"img": 'img/choice/4-1.jpg',
+            "des": 'Combo 1'},
+            {"img": 'img/choice/4-2.jpg',
+            "des": 'Combo 2'},
+            {"img": 'img/choice/4-3.jpg',
+            "des": 'Combo 3'},
+            {"img": 'img/choice/4-4.jpg',
+            "des": 'Combo 4'}
         ]
     }
     template = loader.get_template('game.html')

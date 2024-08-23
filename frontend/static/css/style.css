@@ -1,5 +1,7 @@
+@import url("https://fonts.cdnfonts.com/css/utm-avo");
+/* @import url("https://fonts.cdnfonts.com/css/lato"); */
 html {
-  font-family: Arial;
+  font-family: Roboto, sans-serif;
   max-width: 600px;
   margin: 0 auto;
   background-color: #fff;
@@ -30,7 +32,14 @@ header .logo {
   height: 60px;
   background: linear-gradient(270deg, #c24491, #775fd9);
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Calibri", sans-serif;
+}
 h1,
 h2,
 h3,
@@ -150,10 +159,6 @@ input:focus-visible {
   min-height: 150px;
   background-color: #f5e9f0;
 }
-.controler_item img {
-  max-height: 120px;
-  overflow: hidden;
-}
 .controler_item p {
   padding: 5px;
 }
@@ -175,10 +180,18 @@ input:focus-visible {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+}
+.item_contain img {
+  width: 100%;
+  height: 100%;
+}
+.item_content {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 12px;
 }
 .active {
   background-color: #ff253f !important;
@@ -276,6 +289,9 @@ footer {
 
 .bet {
   background-color: #fff;
+  position: sticky;
+  top: 120px;
+  z-index: 25;
 }
 .bet_header {
   padding: 0 15px;
@@ -283,6 +299,7 @@ footer {
 .bet_main {
   display: flex;
   width: 100%;
+  height: 100%;
   justify-content: space-evenly;
   flex-wrap: wrap;
   background-color: #f3f3f3;
@@ -314,9 +331,6 @@ footer {
   .controler_img {
     height: 30%;
   }
-  .controler_imgV2 {
-    height: 50%;
-  }
   .bet_item {
     width: 45%;
   }
@@ -344,7 +358,7 @@ footer {
 }
 .bet_table {
   display: none;
-  padding: 10px 0;
+  padding-bottom: 10px;
 }
 .bet_info {
   display: flex;
