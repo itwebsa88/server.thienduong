@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SA88 Quà tặng ngập tràn</title>
     <style>
+      .box {
+        background-image: url("photo_2024-08-23_13-28-10.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        min-height: 500px;
+      }
       .btn {
+        top: 40%;
+        left: 30%;
+        translate: (-50%, -50%);
+        position: fixed;
         height: 100px;
         width: 300px;
         border: none;
@@ -16,8 +27,11 @@
       }
       @media (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
         .btn {
-          height: 250px;
-          width: 390px;
+          top: 280px;
+          left: 40px;
+          position: fixed;
+          height: 100px;
+          width: 150px;
           border: none;
           background: url(Nut.png) center / contain no-repeat;
           color: transparent;
@@ -45,8 +59,8 @@
     </style>
   </head>
   <body>
-    <div style="text-align: center; background: url('photo_2024-08-23_13-28-10.jpg')">
-      <input type="button" class="btn" onclick="window.open('#', '_self')" value="'" />
+    <div class="box">
+      <input type="button" class="btn" onclick="window.open('https://www.sa88881.com/signup', '_blank')" value="'" />
     </div>
   </body>
 </html>
