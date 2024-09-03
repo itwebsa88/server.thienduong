@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% load static %} {% block head %}
+{% extends "base.html" %} {% load static %} {% load humanize %} {% block head %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 {% endblock %} {% block content %}
 <style>
@@ -12,11 +12,11 @@
   <div class="bet">
     <div class="bet_header">
       <div class="bet_title">
-        <h3>Lượt bán: 2222XXXXX</h3>
+        <h3>Lượt bán: {{current}}</h3>
         <span class="red" id="count"></span>
       </div>
       <div style="background: linear-gradient(to right, rgba(126, 86, 120, 0), rgb(239, 66, 205), rgba(126, 86, 120, 0)); width: 100%; height: 2px"></div>
-      <div class="bet_title">Lượt bán trước: 2222XXXXX <span class="red">Xinh Đẹp Đáng Yêu</span></div>
+      <div class="bet_title">Lượt bán trước: {{last.expect}}<span class="red">{{last.opencode}}</span></div>
     </div>
   </div>
   <div class="bet_main">
@@ -53,7 +53,7 @@
           <span>Lựa chọn</span>
         </div>
         <div class="line"></div>
-        <div class="mid">Số dư:&nbsp;<span class="red">0 $</span></div>
+        <div class="mid">Số dư:&nbsp;<span class="red" id="balance">{{member.money|intcomma}}</span></div>
         <div class="right">
           <button>XÁC NHẬN</button>
         </div>

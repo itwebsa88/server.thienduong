@@ -1,115 +1,110 @@
-{% extends "base.html" %}
-{% load static %}
-{% block head %}
-<link rel="stylesheet" href="{% static 'css/account.css' %}">
-{% endblock %}
-{% block content %}
-    
-    <div class="content">
-        <div class="detail">
-            <div class="user-wrapper">
-                <div class="user_img">
-                    <img src="{% static 'img/icon/i/avatar.png' %}" alt="">
-                </div>
-                <div class="user_content">
-                    <a href="/login/"><button>Đăng Nhập</button></a>
-                    <a href="/register"><button>Đăng ký</button></a>
-                </div>
-            </div>
-            <div class="divider"></div>
-            <div class="finance">
-                <div class="finance-item">
-                    <span>Nạp tiền</span>
-                </div>
-                <div class="line"></div>
-                <div class="finance-item">
-                    <span>Rút tiền</span>
-                </div>
-            </div>
-        </div>
-        <div class="wallet">
-            <div class="part1">
-                Ví của tôi
-            </div>
-            <div class="part2">
-                <p class="balance">0</p>
-                <span>Số điểm(đ)</span>
-                <div class="refresh-btn"></div>
-            </div>
-        </div>
-        <div class="menu">
-            <div class="menu-item">
-                <a href="/account/detail/">
-                    <div class="menu-item-icon">
-                        <img src="{% static '/img/icon/i/detail.svg' %}" alt="">
-                    </div>
-                </a>
-                <a href="/account/detail/">
-                    <div class="menu-item-label">
-                        Chi tiết tài khoản
-                    </div>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a href="/account/info">
-                    <div class="menu-item-icon">
-                        <img src="{% static '/img/icon/i/user.svg' %}" alt="">
-                    </div>
-                </a>
-                <a href="/account/info">
-                    <div class="menu-item-label">
-                        Thông tin cá nhân
-                    </div>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a href="/account/outcome">
-                    <div class="menu-item-icon">
-                        <img src="{% static '/img/icon/i/outcome.svg' %}" alt="">
-                    </div>
-                </a>
-                <a href="/account/outcome/">
-                    <div class="menu-item-label">
-                        Lịch sử rút tiền
-                    </div>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a href="/account/bet/">
-                    <div class="menu-item-icon">
-                        <img src="{% static '/img/icon/i/bet.svg' %}" alt="">
-                    </div>
-                </a>
-                <a href="/account/bet/">
-                    <div class="menu-item-label">
-                        Lịch sử bình chọn
-                    </div>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a href="/account/notice/">
-                    <div class="menu-item-icon">
-                        <img src="{% static '/img/icon/i/notice.svg' %}" alt="">
-                    </div>
-                </a>
-                <a href="/account/notice/">
-                    <div class="menu-item-label">
-                        Thông báo
-                    </div>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a href="/account/contact/">
-                    <div class="menu-item-icon">
-                        <img src="{% static '/img/icon/i/cskh.svg' %}" alt="">
-                    </div>
-                </a>
-                <a href="/account/contact/">
-                    <div class="menu-item-label">
-                        Chăm sóc khách hàng
-                    </div>
-                </a>
-            </div>
-        </div>
+{% extends "base.html" %} {% load static %} {% load humanize %} {% block head %}
+<link rel="stylesheet" href="{% static 'css/account.css' %}" />
+{% endblock %} {% block content %}
+
+<div class="content">
+  <div class="detail">
+    <div class="user-wrapper">
+      <div class="user_img">
+        <img src="{% static 'img/icon/i/avatar.png' %}" alt="" />
+      </div>
+      {% if name == '' %}
+      <div class="user_content">
+        <a href="/login/"><button>Đăng Nhập</button></a>
+        <a href="/register"><button>Đăng ký</button></a>
+      </div>
+      {% else %}
+      <div class="user_content">{{name}}</div>
+      {% endif %}
     </div>
+    <div class="divider"></div>
+    <div class="finance">
+      <div class="finance-item">
+        <span>Nạp tiền</span>
+      </div>
+      <div class="line"></div>
+      <div class="finance-item">
+        <span>Rút tiền</span>
+      </div>
+    </div>
+  </div>
+  <div class="wallet">
+    <div class="part1">Ví của tôi</div>
+    <div class="part2">
+      <p class="balance" id="balance">{{ member.money|floatformat:2|intcomma }}</p>
+      <span>Số điểm(đ)</span>
+      <div class="refresh-btn"></div>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="menu-item">
+      <a href="/account/detail/">
+        <div class="menu-item-icon">
+          <img src="{% static '/img/icon/i/detail.svg' %}" alt="" />
+        </div>
+      </a>
+      <a href="/account/detail/">
+        <div class="menu-item-label">Chi tiết tài khoản</div>
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="/account/info">
+        <div class="menu-item-icon">
+          <img src="{% static '/img/icon/i/user.svg' %}" alt="" />
+        </div>
+      </a>
+      <a href="/account/info">
+        <div class="menu-item-label">Thông tin cá nhân</div>
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="/account/outcome">
+        <div class="menu-item-icon">
+          <img src="{% static '/img/icon/i/outcome.svg' %}" alt="" />
+        </div>
+      </a>
+      <a href="/account/outcome/">
+        <div class="menu-item-label">Lịch sử rút tiền</div>
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="/account/bet/">
+        <div class="menu-item-icon">
+          <img src="{% static '/img/icon/i/bet.svg' %}" alt="" />
+        </div>
+      </a>
+      <a href="/account/bet/">
+        <div class="menu-item-label">Lịch sử bình chọn</div>
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="/account/notice/">
+        <div class="menu-item-icon">
+          <img src="{% static '/img/icon/i/notice.svg' %}" alt="" />
+        </div>
+      </a>
+      <a href="/account/notice/">
+        <div class="menu-item-label">Thông báo</div>
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="/account/contact/">
+        <div class="menu-item-icon">
+          <img src="{% static '/img/icon/i/cskh.svg' %}" alt="" />
+        </div>
+      </a>
+      <a href="/account/contact/">
+        <div class="menu-item-label">Chăm sóc khách hàng</div>
+      </a>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/simple-mask-money@4.1.3/lib/simple-mask-money.umd.min.js"></script>
+<script>
+  SimpleMaskMoney.setMask("#balance", {
+    prefix: "VND",
+    decimalSeparator: ".",
+    thousandsSeparator: ",",
+  });
+</script>
 {% endblock content %}

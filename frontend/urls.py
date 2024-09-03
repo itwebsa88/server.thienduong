@@ -17,6 +17,6 @@ urlpatterns = [
     path('account/bet/', views.bet, name='bet'),
     path('account/notice/', views.notice, name='notice'),
     path('account/contact/', views.contact, name='contact'),
-    path('login/', views.login, name='login'),
-    path('register/', views.register, name='register'),
+    path('login/', views.login_view, name='login'),
+    path('register/', views.register_view, name='register'),
 ]

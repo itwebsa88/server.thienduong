@@ -1,42 +1,42 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
     <title>ĐĂNG NHẬP</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="login">
-        <div class="navbar">
-
+      <div class="navbar"></div>
+      <div class="wrapper">
+        <div class="logo_container">
+          <div class="logo_wrapper">
+            <img class="loginImg" src="{% static 'img/icon/logo-login.png' %}" alt="" />
+          </div>
         </div>
-        <div class="wrapper">
-            <div class="logo_container">
-                <div class="logo_wrapper">
-                    <img src="{% static 'img/icon/logo-login.png' %}" alt="">
-                </div>
-            </div>
-            <div class="title">
-                Đăng Nhập
-            </div>
-            <div class="loginForm">
-                <div class="input">
-                    <input type="text" placeholder="Tên đăng nhập">
-                </div>
-                <div class="input">
-                    <input type="password" placeholder="Mật khẩu">
-                </div>
-                <div class="reset_text">Quên mật khẩu?</div>
-                <a href="/register">
-                    <div class="register_text">Đăng ký tài khoản</div>
-                </a>
-                <button>Đăng nhập</button>
-            </div>
+        <div class="title">Đăng Nhập</div>
+        <div style="text-align: center; color: #fff">
+          {% if msg %}
+          <small>{{ msg | safe }}</small>
+          {% else %} Nhập thông tin {% endif %}
         </div>
+        <form method="POST">
+          {% csrf_token %}
+          <div class="form-group">{{ form.username }}</div>
+          <div class="form-group">{{ form.password }}</div>
+          <div class="reset_text">Quên mật khẩu?</div>
+          <a href="/register/">
+            <div class="register_text">Đăng ký</div>
+          </a>
+          <div class="form-group">
+            <button>Đăng Nhập</button>
+          </div>
+        </form>
+      </div>
     </div>
-</body>
+  </body>
 </html>

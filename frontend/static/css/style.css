@@ -1,5 +1,10 @@
 @import url("https://fonts.cdnfonts.com/css/utm-avo");
 /* @import url("https://fonts.cdnfonts.com/css/lato"); */
+
+.loginImg {
+  width: 50px !important;
+  visibility: hidden;
+}
 html {
   font-family: Roboto, sans-serif;
   max-width: 600px;
